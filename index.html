@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Love You</title>
+</head>
+<body>
+    <div id="love-messages"></div>
+
+    <script>
+        const loveMessages = document.getElementById('love-messages');
+
+        const customColors = ['❤️', '🧡', '💛', '💚', '🩷', '🩵'];          
+        
+        for (let i = 1; i <= 1000; i++) {
+            const message = document.createElement('p');
+            const heart = document.createElement('span');
+            heart.textContent = customColors[(i-1) % customColors.length];
+            
+            message.textContent = `I love you ${i}% `;
+            message.appendChild(heart);
+            loveMessages.appendChild(message);
+        }
+    </script>
+</body>
+</html>
